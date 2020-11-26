@@ -104,7 +104,7 @@ var functions = template.Must(base.Parse(`
 
 {{ range .Funcs }}
 
-### func [{{ .Name }}]({{ urlOrName (index $.Files .Pos.File) }}#L{{ .Pos.Line }})
+### func {{ .Name }}
 
 {{ inlineCode .Decl.Text }}
 
@@ -125,7 +125,7 @@ var types = template.Must(base.Parse(`
 
 {{ range .Types }}
 
-### type [{{ .Name }}]({{ urlOrName (index $.Files .Pos.File) }}#L{{ .Pos.Line }})
+### type {{ .Name }}
 
 {{ inlineCodeEllipsis .Decl.Text }}
 
